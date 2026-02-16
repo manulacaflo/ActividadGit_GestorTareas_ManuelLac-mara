@@ -20,5 +20,14 @@
 </body>
 </html>
 
-<button onclick="anadirTarea()" style="background-color: red; color: white;">Añadir</button>
+<button onclick="eliminarTarea()" style="background-color: red; color: white;">Añadir</button>
 <button style="background-color: blue; color: white;">Eliminar</button>
+
+function anadirTarea() { ... (lo que ya había) ... }
+
+function eliminarUltima() {
+    let lista = document.getElementById("lista");
+    if (lista.lastChild) {
+        lista.removeChild(lista.lastChild);
+    }
+}

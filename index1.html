@@ -22,3 +22,13 @@
 
 <button onclick="anadirTarea()" style="background-color: red; color: white;">Añadir</button>
 <button style="background-color: blue; color: white;">Eliminar</button>
+function anadirTarea() {
+    // ... código de añadir ...
+    li.onclick = function() { editarTarea(this); }; // Nueva línea
+    document.getElementById("lista").appendChild(li);
+}
+
+function editarTarea(elemento) {
+    let nuevoTexto = prompt("Edita la tarea:", elemento.innerText);
+    if (nuevoTexto) elemento.innerText = nuevoTexto;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestor de Tareas</title>
+</head>
+<body>
+    <h1>Mis Tareas</h1>
+    <input type="text" id="tareaInput" placeholder="Nueva tarea">
+    <button onclick="anadirTarea()">Añadir</button>
+    <button>Eliminar</button> <ul id="lista"></ul>
+
+    <script>
+        function anadirTarea() {
+            let valor = document.getElementById("tareaInput").value;
+            let li = document.createElement("li");
+            li.appendChild(document.createTextNode(valor));
+            document.getElementById("lista").appendChild(li);
+        }
+    </script>
+</body>
+</html>
